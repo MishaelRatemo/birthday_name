@@ -1,0 +1,43 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(/img/birthday.jpg);
+    background-size: cover;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+#ballon1,#balloon2{
+    /* top: -10%; */
+}
+
+#balloon1 {
+    position: relative;
+    left: 10%;
+    transform-origin: 50% 0;
+    animation: ballon1 4s ease-in-out backwards infinite;
+} 
+@keyframes ballon1 {
+    0%{transform: rotate(30deg) ;}
+    50%{transform: rotate(-30deg);}
+    100%{transform: rotate(30deg);}
+    
+}
+#balloon2 {
+    position: relative;
+    right: 5%;
+    transform-origin: 50% 0;
+    animation: ballon2 4s ease-in-out backwards infinite;
+} 
+@keyframes ballon2 {
+    0%{transform: rotate(-30deg) ;}
+    50%{transform: rotate(30deg);}
+    100%{transform: rotate(-30deg);}
+    
+}
+
+
