@@ -9,6 +9,13 @@ let ErrorYear = document.getElementById('erroryear');
 let ErrorGender =document.querySelector('.errorGender');
 
 
+//Days of the week with Male Akan Names
+const male_week_days_names ={Sunday:"Kwasi",Monday:"Kwadwo",Tuesday:"Kwabena", Wednesday:"Kwaku",Thursday:"Yaw",Friday:"Kofi",Saturday:"Kwame"};
+
+//Days of the week with Female Akan Names
+const female_week_days_names ={Sunday:"Akosua",Monday:"Adwoa",Tuesday:"Abenaa", Wednesday:"Akua",Thursday:"Yaa",Friday:"Afua",Saturday:"Ama"};
+
+
     
 // Add event listeners
 form_Data.addEventListener('submit', validateDay);
