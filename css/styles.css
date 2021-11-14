@@ -49,11 +49,10 @@ fieldset{
     border-radius: 20px;
 }
 
-.input-group input[type=number]{
-    display: block;
-    width: 100%;
+.input-group {
+    margin-bottom: 2px;
 }
-.alert{
+.err{
     color: tomato;
     font-weight: 700;
 }
