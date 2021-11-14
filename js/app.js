@@ -25,6 +25,8 @@ function validateDay(e) {
         b_Day="";
     } else if(b_Day >31){
         ErrorsDay.innerHTML="Day can't be more than 31!!"
+    }else{
+        ErrorsDay.innerHTML="";
     }
 }
 
@@ -40,6 +42,8 @@ function validateMonth(e){
         ErrorMonth.innerHTML="Month More than 12 not accepted";
     }else if(m_month === '2' && b_Day >29 ){
         ErrorMonth.innerHTML="February does not have more than 29 days!!";
+    }else{
+        ErrorMonth.innerHTML="";
     }
 }
 function validateYear(e){
@@ -51,5 +55,7 @@ function validateYear(e){
         ErrorYear.innerHTML= "Year: Only 4 digits allowed";
     } else if(year.length < 4){
         ErrorYear.innerHTML=" Year: format should be 4 digits -2000";
+    }else{
+        ErrorYear.innerHTML="";
     }
 }
