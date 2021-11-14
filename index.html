@@ -18,30 +18,34 @@
 
     <fieldset>
       <legend>Birth-day meaning</legend>
-
-      <p class="alert" role="alert" id="errorday" for=""></p> <br>
-        <p class="alert" id="errormonth" for=""></p><br>
-        <p class="alert" id="erroryear" for=""></p>
-      <form id="form_data" name="user_data" action="#">
         
-
+        
+      <form id="form_data" name="user_data" action="#">
         <div class="input-group">
-          <span class="input-group-text">Day</span>
+          <span class="input-group-text">Day &nbsp; &nbsp;:</span>
           <input type="number" id="birth_day" aria-label="Day" class="form-control" placeholder="Enter day in number e.g. 23" >
+        </div>
+        <div class="err" role="alert" id="errorday" for=""></div>
+        <div class="input-group">
           <span class="input-group-text">Month</span>
           <input type="number"  id="birth_month" aria-label="Month" class="form-control" placeholder="Enter month in number e.g 12">
-          <span class="input-group-text">Year</span>
+        </div>
+        <div class="err" id="errormonth" for=""></div>
+        <div class="input-group">
+          <span class="input-group-text">Year &nbsp; &nbsp;:</span>
           <input type="number" id="birth_year" aria-label="Year" class="form-control" maxlength="4" placeholder="Enter year in e.g. 1998">
         </div>
+        <div class="err" id="erroryear" for=""></div>
         <div class="form-group input-group">
           <span class="input-group-text" >Gender</span>
-          <select class="custom-select" id="gender" required>
+          <select class="custom-select" id="gender" >
             <option value="">choose gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
-          <div class="invalid-feedback">Example invalid custom select feedback</div>
+          
         </div>
+        <div class="errorGender err"></div>
          <input type="submit" class="btn btn-outline-success">
 
       </form>
