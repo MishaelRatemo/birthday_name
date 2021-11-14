@@ -84,13 +84,12 @@ const male_week_days_names ={Sunday:"Kwasi",Monday:"Kwadwo",Tuesday:"Kwabena", W
 const female_week_days_names ={Sunday:"Akosua",Monday:"Adwoa",Tuesday:"Abenaa", Wednesday:"Akua",Thursday:"Yaa",Friday:"Afua",Saturday:"Ama"};
  
 function get_my_akanName(){
-    var DD = birth_Day.value;
+    var DD = parseInt(birth_Day.value);
     var MM =parseInt(birth_Month.value);
     var YY = parseInt(birth_Year.value.substr(2,4));
     var CC =parseInt(birth_Year.value.substr(0,2));
 
-    var day_of_the_week= (((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7
-
+    var day_of_the_week= Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7);
 
 alert(day_of_the_week);
 }
