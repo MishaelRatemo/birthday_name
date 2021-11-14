@@ -7,26 +7,16 @@ let ErrorsDay = document.getElementById('errorday');
 let ErrorMonth = document.getElementById('errormonth');
 let ErrorYear = document.getElementById('erroryear');
 let ErrorGender =document.querySelector('.errorGender');
-
-
-//Days of the week with Male Akan Names
-const male_week_days_names ={Sunday:"Kwasi",Monday:"Kwadwo",Tuesday:"Kwabena", Wednesday:"Kwaku",Thursday:"Yaw",Friday:"Kofi",Saturday:"Kwame"};
-
-//Days of the week with Female Akan Names
-const female_week_days_names ={Sunday:"Akosua",Monday:"Adwoa",Tuesday:"Abenaa", Wednesday:"Akua",Thursday:"Yaa",Friday:"Afua",Saturday:"Ama"};
-
-
-    
+ 
 // Add event listeners
 form_Data.addEventListener('submit', validateDay);
 form_Data.addEventListener('submit', validateMonth);
 form_Data.addEventListener('submit', validateYear);
 form_Data.addEventListener('submit', validateGender);
+form_Data.addEventListener('submit',get_my_akanName);
 
 // save the user data in array and convert  data to int
- let my_birthday_date =[];
-
-
+ var    my_birthday_date =[];
 // get correct day
 function validateDay(e) {
     e.preventDefault();  
@@ -43,7 +33,6 @@ function validateDay(e) {
         my_birthday_date.push(parseInt(b_Day));
     }
 }
-
 // get the correct month
 function validateMonth(e){
     e.preventDefault(); 
@@ -59,7 +48,7 @@ function validateMonth(e){
         ErrorMonth.innerHTML="February does not have more than 29 days!!";
     }else{
         ErrorMonth.innerHTML="";
-        my_birthday_date.push(parseInt(m_month));
+        my_birthday_date.push(b_Day);
     }
 }
 // get a year with 4 digits
@@ -68,24 +57,19 @@ function validateYear(e){
     let year= birth_Year.value.trim();
     if ( year ===""){
         ErrorYear.innerHTML= " Year Can't be empty";
-    } else if(year.length >4){
-        ErrorYear.innerHTML= "Year: Only 4 digits allowed";
-    } else if(year.length < 4){
-        ErrorYear.innerHTML=" Year: format should be 4 digits -2000";
+    } else if(year.length <4 || year.length <4 ){
+      ErrorYear.innerHTML=" Year: format should be 4 digits -2000";
     }else{
-        ErrorYear.innerHTML="";
-        my_birthday_date.push(parseInt(year));
-        
+        my_birthday_date.push(year);
     }
 }
 //get user to select gender
 function validateGender(){
   if(Gender.value ==="") {
-      ///
     ErrorGender.innerHTML="Please choose Gender";
   }  else{
       my_birthday_date.push(Gender.value);
-      console.log(my_birthday_date);
+      console.log(my_birthday_date)
   }
 }
 
@@ -93,4 +77,20 @@ function validateGender(){
 form_Data.addEventListener('submit', function(){
     document.user_data.reset();
 });
+//Days of the week with Male Akan Names
+const male_week_days_names ={Sunday:"Kwasi",Monday:"Kwadwo",Tuesday:"Kwabena", Wednesday:"Kwaku",Thursday:"Yaw",Friday:"Kofi",Saturday:"Kwame"};
 
+//Days of the week with Female Akan Names
+const female_week_days_names ={Sunday:"Akosua",Monday:"Adwoa",Tuesday:"Abenaa", Wednesday:"Akua",Thursday:"Yaa",Friday:"Afua",Saturday:"Ama"};
+ 
+function get_my_akanName(){
+    var DD = birth_Day.value;
+    var MM =parseInt(birth_Month.value);
+    var YY = parseInt(birth_Year.value.substr(2,4));
+    var CC =parseInt(birth_Year.value.substr(0,2));
+
+    var day_of_the_week= (((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7
+
+
+alert(day_of_the_week);
+}
