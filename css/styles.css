@@ -48,6 +48,12 @@ fieldset{
     position: relative;
     border-radius: 20px;
 }
+fieldset  > div{
+    background-color:#030303;
+    color: wheat;
+    padding: 1.5%;
+
+}
 
 .input-group {
     margin-bottom: 2px;
