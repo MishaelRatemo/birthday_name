@@ -15,9 +15,8 @@ form_Data.addEventListener('submit', validateYear);
 form_Data.addEventListener('submit', validateGender);
 form_Data.addEventListener('submit',get_my_akanName);
 
-// save the user data in array and convert  data to int
  var    my_birthday_date =[];
-// get correct day
+
 function validateDay(e) {
     e.preventDefault();  
     let b_Day = birth_Day.value.trim();  
@@ -60,6 +59,7 @@ function validateYear(e){
     } else if(year.length <4 || year.length <4 ){
       ErrorYear.innerHTML=" Year: format should be 4 digits -2000";
     }else{
+        ErrorYear.innerHTML="";
         my_birthday_date.push(year);
     }
 }
@@ -68,6 +68,7 @@ function validateGender(){
   if(Gender.value ==="") {
     ErrorGender.innerHTML="Please choose Gender";
   }  else{
+      ErrorGender.innerHTML="";
       my_birthday_date.push(Gender.value);
       console.log(my_birthday_date)
   }
@@ -119,7 +120,9 @@ function get_my_akanName(){
         document.getElementById('akan').innerHTML=text1 + female_week_days_names.Thursday + text2 + " Thursday";
     }else if(gender==="female" && day_of_the_week ===5){
         document.getElementById('akan').innerHTML=text1 + female_week_days_names.Friday + text2 + " Friday";
-    }else {
-        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Saturday + text2 + " Saturday";
+    }else if(gender==="female" && day_of_the_week ===6) {
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Saturday + text2 + " Sunday";
+    }else{
+        document.getElementById('akan').innerHTML="Unknown- Check your data";
     }
 }
