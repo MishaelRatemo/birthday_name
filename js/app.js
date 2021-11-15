@@ -92,35 +92,33 @@ function get_my_akanName(){
 
     var day_of_the_week= Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7);
 
-    if (gender="male" && day_of_the_week === 0){
+    if (gender==="male" && day_of_the_week === 0){
         alert(male_week_days_names.Sunday)
-    }else if(gender="male" && day_of_the_week ===1){
+    }else if(gender==="male" && day_of_the_week ===1){
         alert(male_week_days_names.Monday);
-    }else if(gender="male" && day_of_the_week ===2){
+    }else if(gender==="male" && day_of_the_week ===2){
         alert(male_week_days_names.Tuesday);
-    }else if(gender="male" && day_of_the_week ===3){
+    }else if(gender==="male" && day_of_the_week ===3){
         alert(male_week_days_names.Wednesday);
-    }else if(gender="male" && day_of_the_week ===4){
+    }else if(gender==="male" && day_of_the_week ===4){
         alert(male_week_days_names.Thursday);
-    }else if(gender="male" && day_of_the_week ===5){
+    }else if(gender==="male" && day_of_the_week ===5){
         alert(male_week_days_names.Friday);
-    }else if(gender="male" && day_of_the_week ===6){
+    }else if(gender==="male" && day_of_the_week ===6){
         alert(male_week_days_names.Saturday);
-    }else if(gender="female" && day_of_the_week ===0){
+    }else if(gender==="female" && day_of_the_week ===0){
         alert(female_week_days_names.Sunday);
-    }else if(gender="female" && day_of_the_week ===1){
+    }else if(gender==="female" && day_of_the_week ===1){
         alert(female_week_days_names.Monday);
-    }else if(gender="female" && day_of_the_week ===2){
+    }else if(gender==="female" && day_of_the_week ===2){
         alert(female_week_days_names.Tuesday);
-    }else if(gender="female" && day_of_the_week ===3){
+    }else if(gender==="female" && day_of_the_week ===3){
         alert(female_week_days_names.Wednesday);
-    }else if(gender="female" && day_of_the_week ===4){
+    }else if(gender==="female" && day_of_the_week ===4){
         alert(female_week_days_names.Thursday);
     }else if(gender==="female" && day_of_the_week ===5){
         alert(female_week_days_names.Friday);
     }else {
         alert(female_week_days_names.Saturday);
     }
-
-alert(Gender.value);
 }
