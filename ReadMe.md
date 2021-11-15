@@ -32,7 +32,7 @@ user date of birth and find the day user was born and give the user an Akan name
 * use condition based on gender to assign the Akan name
 
  ## Live Demo
- click [here]() to view 
+ click [here](https://mishaelratemo.github.io/birthday_name/) to view 
 
 
  ## Technologies Used
@@ -54,7 +54,7 @@ user date of birth and find the day user was born and give the user an Akan name
 
 
 ## Reference
-* W3schools
+* [MDN Web Docs](https://developer.mozilla.org/en-US/)
 * Youtube  videos
 * Bootstrap , click  [getbootstrap.com](https://getbootstrap.com/) to learn more
 * Udemy Courses
@@ -68,6 +68,8 @@ Copyright (c) [2021] [Mishael Ratemo]
 ## Author's Info
 
 LinkedIn - [Mishael Ratemo](www.linkedin.com/in/mishael-mosoti-37b786161/)
+
+
 Portfolio- [Mishael](https://mishaelratemo.github.io/my_portfolio/)
 
 [Go-top](#MyPortfolio)
