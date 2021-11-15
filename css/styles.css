@@ -11,10 +11,6 @@ body{
     float: right;
 }
 
-#ballon1,#balloon2{
-    /* top: -10%; */
-}
-
 #balloon1 {
     position: relative;
     left: 10%;
@@ -52,7 +48,6 @@ fieldset  > div{
     background-color:rgba(0,0,0, 0.6);
     color: wheat;
     padding: 1.5%;
-
 }
 
 .input-group {
