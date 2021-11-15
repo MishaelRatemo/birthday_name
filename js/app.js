@@ -92,33 +92,34 @@ function get_my_akanName(){
 
     var day_of_the_week= Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7);
 
+        var text1="Your given name is  "; var text2="  born on a";
     if (gender==="male" && day_of_the_week === 0){
-        alert(male_week_days_names.Sunday)
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Sunday + text2 + " Sunday";
     }else if(gender==="male" && day_of_the_week ===1){
-        alert(male_week_days_names.Monday);
+       document.getElementById('akan').innerHTML=text1 + male_week_days_names.Monday + text2 + " Monday";
     }else if(gender==="male" && day_of_the_week ===2){
-        alert(male_week_days_names.Tuesday);
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Tuesday + text2 + " Tuesday";
     }else if(gender==="male" && day_of_the_week ===3){
-        alert(male_week_days_names.Wednesday);
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Wednesday + text2 + " Wednesday";
     }else if(gender==="male" && day_of_the_week ===4){
-        alert(male_week_days_names.Thursday);
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Thursday + text2 + " Thursday";
     }else if(gender==="male" && day_of_the_week ===5){
-        alert(male_week_days_names.Friday);
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Friday + text2 + " Friday";
     }else if(gender==="male" && day_of_the_week ===6){
-        alert(male_week_days_names.Saturday);
+        document.getElementById('akan').innerHTML=text1 + male_week_days_names.Saturday + text2 + " Saturday";
     }else if(gender==="female" && day_of_the_week ===0){
-        alert(female_week_days_names.Sunday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Sunday + text2 + " Sunday";
     }else if(gender==="female" && day_of_the_week ===1){
-        alert(female_week_days_names.Monday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Monday + text2 + " Monday";
     }else if(gender==="female" && day_of_the_week ===2){
-        alert(female_week_days_names.Tuesday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Tuesday + text2 + " Tuesday";
     }else if(gender==="female" && day_of_the_week ===3){
-        alert(female_week_days_names.Wednesday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Wednesday + text2 + " Wednesday";
     }else if(gender==="female" && day_of_the_week ===4){
-        alert(female_week_days_names.Thursday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Thursday + text2 + " Thursday";
     }else if(gender==="female" && day_of_the_week ===5){
-        alert(female_week_days_names.Friday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Friday + text2 + " Friday";
     }else {
-        alert(female_week_days_names.Saturday);
+        document.getElementById('akan').innerHTML=text1 + female_week_days_names.Saturday + text2 + " Saturday";
     }
 }
