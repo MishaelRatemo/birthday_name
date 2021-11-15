@@ -86,12 +86,20 @@ const female_week_days_names ={Sunday:"Akosua",Monday:"Adwoa",Tuesday:"Abenaa", 
  
 function get_my_akanName(){
     var gender =Gender.value;
+    var day= birth_Day.value;
+    var month = birth_Month.value;
+    var year = birth_Year.value;
     var DD = parseInt(birth_Day.value);
     var MM =parseInt(birth_Month.value);
     var YY = parseInt(birth_Year.value.substr(2,4));
     var CC =parseInt(birth_Year.value.substr(0,2));
 
-    var day_of_the_week= Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7);
+    // var day_of_the_week= Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10)) + DD )% 7);
+    var   my_date=year+"/"+month+"/"+day;
+    my_date.toString();
+    my_date = new Date(my_date);
+    var day_of_the_week=my_date.getDay();
+    console.log(day_of_the_week)
 
         var text1="Your given name is  "; var text2="  born on a";
     if (gender==="male" && day_of_the_week === 0){
